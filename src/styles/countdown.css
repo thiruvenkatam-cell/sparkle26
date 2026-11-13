@@ -1,0 +1,109 @@
+/* Home countdown */
+.countdown-section {
+  text-align: center;
+}
+.countdown-section h2 {
+  font:
+    800 clamp(30px, 4vw, 48px)/1.15 Manrope,
+    sans-serif;
+  letter-spacing: -0.05em;
+  margin: 14px 0 34px;
+}
+.countdown-section h2 em {
+  font-style: normal;
+  color: var(--orange);
+}
+.cd-wrap {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 940px;
+  margin: 0 auto;
+}
+.cd-card {
+  background: linear-gradient(160deg, var(--panel2), var(--panel));
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 26px 24px 28px;
+}
+.cd-live {
+  border-color: #ff762c88;
+  box-shadow: 0 0 40px #ff762c22;
+}
+.cd-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  font-weight: 700;
+}
+.cd-level {
+  color: var(--orange2);
+}
+.cd-date {
+  color: var(--muted);
+}
+.cd-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin: 22px 0 6px;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+}
+.cd-hours b {
+  display: block;
+  font:
+    800 clamp(46px, 6vw, 68px)/1 Manrope,
+    sans-serif;
+  color: var(--orange);
+  letter-spacing: -0.04em;
+}
+.cd-hours span {
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.cd-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 22px;
+}
+.cd-grid div {
+  background: #ffffff0a;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  padding: 12px 4px 9px;
+}
+.cd-grid b {
+  display: block;
+  font:
+    800 24px/1 Manrope,
+    sans-serif;
+}
+.cd-grid small {
+  display: block;
+  margin-top: 6px;
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  color: var(--muted);
+}
+.cd-over {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 44px 0;
+  color: var(--muted);
+}
+@media (max-width: 720px) {
+  .cd-wrap {
+    grid-template-columns: 1fr;
+  }
+}

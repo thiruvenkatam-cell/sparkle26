@@ -1,0 +1,343 @@
+
+/* =====================================
+   SPARKLE'26 - ABOUT PAGE
+===================================== */
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.about-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 410px;
+  padding: 150px clamp(24px, 7.5vw, 120px) 64px;
+  background: linear-gradient(
+    112deg,
+    #102b40 8%,
+    #163a50 58%,
+    #1b4055
+  );
+  border-bottom: 1px solid var(--line, #ffffff18);
+  color: #f7f9fc;
+}
+
+/* Background Video */
+
+.about-hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -3;
+  opacity: 0.85;
+  filter: brightness(1.5) contrast(1.05) saturate(1.1);
+}
+
+/* Video Overlay */
+
+.about-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: linear-gradient(
+    90deg,
+    rgba(6, 21, 34, 0.25) 0%,
+    rgba(11, 37, 56, 0.18) 55%,
+    rgba(17, 43, 61, 0.10) 100%
+  );
+  pointer-events: none;
+}
+
+/* Background Grid */
+
+.about-hero:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.22;
+  background-image:
+    linear-gradient(#ffffff0b 1px, transparent 1px),
+    linear-gradient(90deg, #ffffff0b 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(90deg, #000, transparent 90%);
+}
+
+
+/* Hero Content */
+
+.about-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+}
+
+.about-kicker {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--orange, #ff762c);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.about-hero-content h1 {
+  font: 800 clamp(42px, 6.8vw, 78px)/1.05 Manrope, sans-serif;
+  letter-spacing: -0.065em;
+  margin: 22px 0 18px;
+}
+
+.about-hero-content h1 em {
+  font-style: normal;
+  color: var(--orange, #ff762c);
+}
+
+.about-hero-content > p:not(.about-kicker) {
+  max-width: 540px;
+  color: #c0cfdb;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* Hero Meta */
+
+.about-hero-meta {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 32px;
+  color: #c0cfdb;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.about-hero-meta i {
+  width: 1px;
+  height: 16px;
+  background: #ffffff45;
+}
+
+/* S26 Branding */
+
+.about-hero-mark {
+  position: absolute;
+  right: clamp(30px, 9vw, 140px);
+  bottom: 35px;
+  font: 800 clamp(75px, 13vw, 160px)/1 Manrope, sans-serif;
+  color: #ffffff0a;
+  letter-spacing: -0.1em;
+  pointer-events: none;
+}
+
+.about-hero-mark span {
+  color: #ff762c20;
+}
+
+/* Scroll Indicator */
+
+.about-scroll {
+  position: absolute;
+  right: clamp(24px, 7.5vw, 120px);
+  bottom: 35px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #ffad7a;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+
+/* =====================================
+   ABOUT CONTENT
+===================================== */
+
+.about-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 7vw, 100px);
+  align-items: center;
+}
+
+.about-layout h2 {
+  font:
+    800 clamp(32px, 4vw, 52px)/1.15 Manrope,
+    sans-serif;
+  letter-spacing: -0.055em;
+  margin: 17px 0 22px;
+}
+
+.about-layout h2 em {
+  font-style: normal;
+  color: var(--orange);
+}
+
+.about-layout > div > p:not(.kicker) {
+  color: var(--muted);
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+/* Campus Image */
+
+.about-photo {
+  position: relative;
+}
+
+.about-photo img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 7px;
+}
+
+.about-photo span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: var(--orange);
+  padding: 15px 20px;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  font-weight: 800;
+}
+
+
+/* =====================================
+   VALUE LIST
+===================================== */
+
+.value-list {
+  display: grid;
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.value-list > div {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.value-list svg {
+  color: var(--orange);
+  width: 19px;
+  flex-shrink: 0;
+}
+
+.value-list span {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.value-list b {
+  font-size: 13px;
+}
+
+.value-list small {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+
+/* =====================================
+   QUOTE SECTION
+===================================== */
+
+.quote-band {
+  padding: 60px 25px;
+  text-align: center;
+  background: #10283b;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  color: var(--orange);
+}
+
+.quote-band blockquote {
+  font: 700 clamp(22px, 3.5vw, 36px) Manrope;
+  color: #f7f8fc;
+  max-width: 800px;
+  margin: 0;
+}
+
+.quote-band span {
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  color: var(--muted);
+}
+
+
+/* =====================================
+   TABLET RESPONSIVE
+===================================== */
+
+@media (max-width: 1000px) {
+  .about-layout {
+    gap: 40px;
+  }
+}
+
+
+/* =====================================
+   MOBILE RESPONSIVE
+===================================== */
+
+@media (max-width: 720px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .about-layout h2 {
+    font-size: 36px;
+  }
+
+  .about-photo img {
+    height: 330px;
+  }
+}
+
+@media (max-width: 650px) {
+  .about-hero {
+    min-height: 420px;
+    padding: 135px 24px 95px;
+  }
+
+  .about-hero-content h1 {
+    font-size: clamp(38px, 10vw, 52px);
+  }
+
+  .about-hero-content > p:not(.about-kicker) {
+    font-size: 13px;
+  }
+
+  .about-hero-meta {
+    gap: 11px;
+    flex-wrap: wrap;
+  }
+
+  .about-hero-mark {
+    font-size: 75px;
+    right: 20px;
+    bottom: 15px;
+  }
+
+  .about-hero-glow {
+    right: -160px;
+  }
+
+  .about-scroll {
+    left: 24px;
+    right: auto;
+    bottom: 25px;
+    font-size: 8px;
+  }
+}

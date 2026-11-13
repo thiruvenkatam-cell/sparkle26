@@ -1,0 +1,303 @@
+/* Ticket page + 404 page */
+
+/* ---------- Page ---------- */
+.ticket-page {
+  padding: 145px 24px 90px;
+  min-height: 75vh;
+  background: radial-gradient(ellipse at 50% 0, #14334a, #061522 65%);
+}
+
+.ticket-success {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 35px;
+}
+.ticket-success h1 {
+  font: 800 clamp(37px, 5vw, 58px) Manrope;
+  letter-spacing: -0.06em;
+  margin: 10px 0;
+}
+.ticket-success h1 em {
+  font-style: normal;
+  color: var(--orange);
+}
+.ticket-success > p:last-child {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+.success-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  color: #78e0b3;
+  background: #78e0b318;
+}
+
+/* ---------- Digital ticket (dark) ---------- */
+.digital-ticket {
+  --notch: #0c2438; /* page background colour ku match pannunga */
+  position: relative;
+  max-width: 860px;
+  margin: 0 auto;
+  overflow: hidden;
+  color: #fff;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(255, 122, 26, 0.22), transparent 45%),
+    linear-gradient(135deg, #10304f 0%, #0a1b2e 60%, #08121f 100%);
+  border: 1px solid #ffffff1a;
+  border-radius: 22px;
+  box-shadow: 0 30px 90px #0007;
+}
+/* top orange stripe */
+.digital-ticket::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 5px;
+  background: linear-gradient(90deg, #ff6a00, #ffb347, #ff6a00);
+}
+
+/* header: logo + confirmed pill */
+.digital-ticket-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 36px 22px;
+  border-bottom: 1px solid #ffffff14;
+}
+.ticket-brand-logo {
+  display: block;
+  line-height: 0;
+}
+.ticket-brand-logo img {
+  display: block;
+  width: clamp(150px, 22vw, 210px);
+  height: auto;
+}
+.confirmed-pill {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #4ade80;
+  background: #4ade8020;
+  border: 1px solid #4ade8059;
+  padding: 8px 14px;
+  border-radius: 99px;
+}
+
+/* main body */
+.ticket-main {
+  padding: 34px 36px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 34px;
+  align-items: center;
+}
+.ticket-main .kicker {
+  font-size: 10px;
+  color: var(--orange);
+}
+.ticket-main h2 {
+  font: 800 clamp(30px, 5vw, 44px) Manrope;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  margin: 10px 0 6px;
+  color: #fff;
+}
+.ticket-main > div > p:not(.kicker) {
+  font-size: 14px;
+  color: #ffffffa6;
+}
+.ticket-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 30px;
+  margin-top: 30px;
+}
+.ticket-detail-grid div {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.ticket-detail-grid small {
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: #ffffff80;
+}
+.ticket-detail-grid b {
+  font-size: 15px;
+  color: #fff;
+  overflow-wrap: anywhere;
+}
+/* ticket code highlight */
+.ticket-detail-grid > div:first-child b {
+  color: #ffa04d;
+  letter-spacing: 0.04em;
+}
+
+/* QR stays white so it scans properly */
+.qr-panel {
+  padding: 14px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 0 0 6px #ff7a1a2e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.qr-panel small {
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  color: #0a1b2e;
+}
+
+/* tear-off line + side notches */
+.ticket-perforation {
+  position: relative;
+  height: 28px;
+}
+.ticket-perforation::before {
+  content: '';
+  position: absolute;
+  left: 36px;
+  right: 36px;
+  top: 50%;
+  border-top: 2px dashed #ffffff2e;
+}
+.ticket-perforation span {
+  position: absolute;
+  top: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--notch);
+}
+.ticket-perforation span:first-child {
+  left: -14px;
+}
+.ticket-perforation span:last-child {
+  right: -14px;
+}
+
+/* footer row */
+.ticket-bottom {
+  padding: 18px 36px 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.ticket-bottom span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #ffffffb3;
+}
+.ticket-bottom svg {
+  width: 15px;
+  color: var(--orange);
+}
+
+/* ---------- Below ticket ---------- */
+.ticket-disclaimer {
+  text-align: center;
+  color: var(--muted);
+  font-size: 11px;
+  margin: 20px auto;
+}
+.ticket-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.light-ghost {
+  border-color: #ffffff55;
+}
+
+/* ---------- Loading / error state ---------- */
+.ticket-result {
+  min-height: 65vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 18px;
+}
+.ticket-result h2 {
+  font: 800 35px Manrope;
+}
+.ticket-result p {
+  color: var(--muted);
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 720px) {
+  .ticket-page {
+    padding: 115px 13px 55px;
+  }
+  .digital-ticket-top {
+    padding: 24px 20px 18px;
+  }
+  .ticket-brand-logo img {
+    width: 130px;
+  }
+  .ticket-main {
+    padding: 24px 20px;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .qr-panel {
+    justify-self: center;
+  }
+  .ticket-detail-grid {
+    gap: 18px;
+  }
+  .ticket-perforation::before {
+    left: 20px;
+    right: 20px;
+  }
+  .ticket-bottom {
+    padding: 18px 20px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .confirmed-pill {
+    font-size: 9px;
+    padding: 6px 10px;
+  }
+  .ticket-success h1 {
+    font-size: 39px;
+  }
+}
+
+/* ---------- Print ---------- */
+@media print {
+  .ticket-success,
+  .ticket-disclaimer,
+  .ticket-actions {
+    display: none !important;
+  }
+  .ticket-page {
+    padding: 0;
+    background: white;
+  }
+  .digital-ticket {
+    --notch: #fff; /* paper white, so notch correct ah theriyum */
+    box-shadow: none;
+    border: 1px solid #bbb;
+    max-width: 100%;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+  .ticket-main {
+    break-inside: avoid;
+  }
+}

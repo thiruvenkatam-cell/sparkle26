@@ -1,0 +1,346 @@
+/* Registration page */
+
+/* =====================================
+   REGISTRATION HERO
+===================================== */
+
+.registration-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 450px;
+  padding: 150px clamp(24px, 7.5vw, 120px) 85px;
+  background: linear-gradient(
+    112deg,
+    #102b40,
+    #163a50 58%,
+    #1b4055
+  );
+  border-bottom: 1px solid var(--line, #ffffff18);
+  color: #f7f9fc;
+}
+
+/* Background Video */
+
+.registration-hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -3;
+  opacity: 0.85;
+  filter: brightness(1.5) contrast(1.05) saturate(1.1);
+}
+
+/* Overlay */
+
+.registration-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: linear-gradient(
+    90deg,
+    rgba(6, 21, 34, 0.28),
+    rgba(11, 37, 56, 0.18) 55%,
+    rgba(17, 43, 61, 0.10) 100%
+  );
+  pointer-events: none;
+}
+
+/* Grid */
+
+.registration-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.18;
+  background-image:
+    linear-gradient(#ffffff0b 1px, transparent 1px),
+    linear-gradient(90deg, #ffffff0b 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(90deg, #000, transparent 90%);
+  pointer-events: none;
+}
+
+/* Glow */
+
+.registration-hero-glow {
+  position: absolute;
+  width: 390px;
+  height: 390px;
+  right: 13%;
+  top: 65px;
+  border: 1px solid #ff762c33;
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 42px #ff762c08,
+    0 0 0 86px #ff762c05;
+  pointer-events: none;
+}
+
+/* Content */
+
+.registration-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+}
+
+.registration-kicker {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #ff762c;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.registration-hero-content h1 {
+  font: 800 clamp(42px, 6.8vw, 78px)/1.05 Manrope, sans-serif;
+  letter-spacing: -0.065em;
+  margin: 22px 0 18px;
+}
+
+.registration-hero-content h1 em {
+  font-style: normal;
+  color: #ff762c;
+}
+
+.registration-hero-content > p:not(.registration-kicker) {
+  max-width: 540px;
+  color: #c0cfdb;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* Meta */
+
+.registration-hero-meta {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 32px;
+  color: #c0cfdb;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.registration-hero-meta i {
+  width: 1px;
+  height: 16px;
+  background: #ffffff45;
+}
+
+/* Branding */
+
+.registration-hero-mark {
+  position: absolute;
+  right: clamp(30px, 9vw, 140px);
+  bottom: 30px;
+  font: 800 clamp(75px, 13vw, 160px)/1 Manrope, sans-serif;
+  color: #ffffff0a;
+  letter-spacing: -0.1em;
+  pointer-events: none;
+}
+
+.registration-hero-mark span {
+  color: #ff762c20;
+}
+
+/* Scroll */
+
+.registration-scroll {
+  position: absolute;
+  right: clamp(24px, 7.5vw, 120px);
+  bottom: 35px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #ffad7a;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+  .registration-hero {
+    min-height: 420px;
+    padding: 135px 24px 95px;
+  }
+
+  .registration-hero-content h1 {
+    font-size: clamp(38px, 10vw, 52px);
+  }
+
+  .registration-hero-content > p:not(.registration-kicker) {
+    font-size: 13px;
+  }
+
+  .registration-hero-meta {
+    gap: 11px;
+    flex-wrap: wrap;
+  }
+
+  .registration-hero-mark {
+    font-size: 75px;
+    right: 20px;
+    bottom: 15px;
+  }
+
+  .registration-hero-glow {
+    right: -160px;
+  }
+
+  .registration-scroll {
+    left: 24px;
+    right: auto;
+    bottom: 25px;
+    font-size: 8px;
+  }
+}
+
+.register-aside h3 em {
+  font-style: normal;
+  color: var(--orange);
+}
+.register-layout {
+  display: grid;
+  grid-template-columns: 0.82fr 1.18fr;
+  gap: 55px;
+  align-items: start;
+}
+.register-aside {
+  position: sticky;
+  top: 30px;
+}
+.ticket-preview {
+  position: relative;
+  overflow: hidden;
+  padding: 34px;
+  background: linear-gradient(145deg, #17344a, #081725);
+  border: 1px solid #ffffff1b;
+  border-radius: 12px;
+  min-height: 310px;
+}
+.ticket-glow {
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  right: -80px;
+  top: -85px;
+  background: #ff762c1c;
+  filter: blur(2px);
+}
+.ticket-preview > svg {
+  color: var(--orange);
+  position: relative;
+}
+.ticket-label {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  color: #a9b7c6;
+  margin-top: 28px;
+}
+.ticket-preview h2 {
+  font: 800 39px Manrope;
+  letter-spacing: -0.06em;
+  margin: 10px 0;
+}
+.ticket-preview h2 span {
+  color: var(--orange);
+}
+.ticket-preview > p {
+  font-size: 10px;
+  letter-spacing: 0.25em;
+}
+.ticket-line {
+  height: 1px;
+  background: #ffffff26;
+  margin: 30px 0 20px;
+}
+.ticket-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+.ticket-meta span {
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.ticket-meta small {
+  font-size: 8px;
+  color: var(--muted);
+  font-weight: 500;
+}
+.register-aside h3 {
+  font: 800 28px/1.3 Manrope;
+  margin: 30px 0 10px;
+}
+.register-aside > p {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+.secure-note {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  color: #b8c6d2;
+  margin-top: 22px;
+}
+.secure-note svg {
+  color: #7bd8ae;
+  width: 18px;
+}
+.step-label {
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  color: var(--orange2);
+  font-weight: 800;
+}
+@media (max-width: 1000px) {
+  .register-layout {
+    gap: 30px;
+  }
+  .register-aside {
+    position: static;
+  }
+}
+@media (max-width: 720px) {
+  .register-layout {
+    grid-template-columns: 1fr;
+  }
+  .register-layout {
+    gap: 30px;
+  }
+  .register-aside h3 {
+    font-size: 25px;
+  }
+}
+
+/* fee line under the event select */
+.fee-summary {
+  margin: 14px 0 6px;
+  padding: 11px 14px;
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--orange);
+  border-radius: 5px;
+  background: rgba(255, 118, 44, 0.08);
+  color: var(--muted);
+  font-size: 13px;
+}
+.fee-summary b {
+  color: #fff;
+}

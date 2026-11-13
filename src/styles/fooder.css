@@ -1,0 +1,10 @@
+.footer-logo {
+  display: inline-block;
+  line-height: 0;
+}
+
+.footer-logo img {
+  width: clamp(160px, 20vw, 240px);
+  height: auto;
+  display: block;
+}

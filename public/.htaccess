@@ -1,0 +1,10 @@
+# SPA fallback for Apache (college server): send every route that isn't a real file
+# (/events, /register, /ticket/ABC123 from the email) to index.html so React Router handles it.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule>
